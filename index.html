@@ -51,7 +51,13 @@ body{font-family:'Sarabun',sans-serif;background:var(--bg);color:var(--text);min
 .li{display:flex;align-items:center;gap:4px;font-size:10.5px;color:var(--muted)}
 .ld{width:10px;height:10px;border-radius:2px;flex-shrink:0}
 /* ── Footer ── */
-.footer{text-align:center;padding:24px;font-size:11px;color:var(--muted)}
+.footer{background:var(--navy);padding:20px 24px;margin-top:32px}
+.footer-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.footer-copy{font-size:11px;color:rgba(255,255,255,.35);line-height:1.7}
+.footer-copy b{color:rgba(255,255,255,.55);font-weight:600}
+.footer-dev{font-size:11px;color:rgba(255,255,255,.3);text-align:right;line-height:1.7}
+.footer-dev span{color:var(--gold);font-weight:600}
+@media(max-width:600px){.footer-inner{justify-content:center;text-align:center}.footer-dev{text-align:center}}
 @media(max-width:600px){
   .charts-row{grid-template-columns:1fr}
   .hdr-sub{display:none}
@@ -126,7 +132,18 @@ body{font-family:'Sarabun',sans-serif;background:var(--bg);color:var(--text);min
   </div>
 </div>
 
-<div class="footer">© DS&amp;B Trademark Department · tmwork.dsb.co.th · จัดทำโดย TMJ Portal System</div>
+<div class="footer">
+  <div class="footer-inner">
+    <div class="footer-copy">
+      <b>© 2023–2026 Domnern Somgiat &amp; Boonma Law Office Limited.</b><br>
+      All rights reserved. · tmwork.dsb.co.th · TM Work Overview Dashboard
+    </div>
+    <div class="footer-dev">
+      Developed by <span>IT Department</span><br>
+      Domnern Somgiat &amp; Boonma Law Office Limited
+    </div>
+  </div>
+</div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
 <script>
